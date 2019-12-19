@@ -1,0 +1,28 @@
+apply from: "buildsystem/config.gradle"
+ext {
+    dependencies = [
+            appcompatV7     : "com.android.support:appcompat-v7:${supportVersion}",
+            supportv4       : "com.android.support:support-v4:${supportVersion}",
+            supportV13      : "com.android.support:support-v13:${supportVersion}",
+
+            design          : "com.android.support:design:${supportVersion}",
+            cardview        : "com.android.support:cardview-v7:${supportVersion}",
+            constraintLayout: "com.android.support.constraint:constraint-layout:1.1.3",
+
+            recyclerview_v7 : "com.android.support:recyclerview-v7:${supportVersion}",
+    ]
+
+    //APP要添加的依赖库
+    dependenciesApp = [
+            appcompatV7     : "${dependencies.appcompatV7}",
+            supportv4       : "${dependencies.supportv4}",
+            constraintLayout: "${dependencies.constraintLayout}",
+    ]
+
+    //widget要添加的依赖库
+    dependenciesVideo = [
+            appcompatV7     : "${dependencies.appcompatV7}",
+            supportv4       : "${dependencies.supportv4}",
+            constraintLayout: "${dependencies.constraintLayout}",
+    ]
+}
